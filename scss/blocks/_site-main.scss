@@ -1,0 +1,117 @@
+.site-main__wrraper {
+    padding: 0;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding-top: 378px;
+    padding-bottom: 555px;
+    background-image: url(../../img/Bitmap.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #788186;
+}
+@include cssretina{
+    .site-main__wrraper{
+        background-image: url(../../img/Bitmap@2x.jpg);
+    }
+}
+.site-main__wrraper-content {
+    padding-top: 56px;
+    padding-right: 56px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0px;
+    background-color: #FAFAFA;;
+}
+.site-main__wrraper-content-page {
+    font-family: $font-public;
+    margin-top: 0;
+    margin-bottom: 48px;
+    width: 390px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 42px;
+    letter-spacing: -0.357143px;
+    color: $color-dark;
+}
+.site-main__wrraper-content-link {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 17px 76px 17px 76px;
+    background-color:#203A4C; 
+    color: #fff;
+    &::before{
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        padding: 22px 16px 25px 22px;
+        vertical-align: middle;
+        display: inline-block;
+        width: 16px;
+        height: 12px;
+        background-image: url(../../img/about-me-img.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: #182f3f;
+        content: '';
+    }
+}
+@include breakpoint-down(950px){
+    .site-main__wrraper{
+        padding-bottom: 171px;
+        background-image: url(../../img/Bitmap-tablet.jpg);
+    }
+    @include cssretina{
+        .site-main__wrraper{
+            background-image: url(../../img/Bitmap-tablet@2x.jpg);
+        }
+    }
+    .site-main__wrraper-content-page{
+        width: 458px;
+        font-size: 40px;
+        line-height: 42px;
+    }
+}
+@include breakpoint-down(516px){
+    .site-main__wrraper{
+        background-image: url(../../img/Bitmap-mobile.jpg);
+        padding-bottom: 35px;
+        z-index: 0;
+    }
+    .site-main__wrraper-content{
+        padding-top: 24px;
+        padding-right: 0;
+        left: 60px;
+        top: 100%;
+        background-color: transparent;
+    }
+    .site-main__wrraper-content-page{
+        width: 344px;
+    }
+    .site-main__wrraper-content-link{
+        &::before{
+            top: 241px;
+        }
+    }
+}
+@include breakpoint-down(407px){
+    .site-main__wrraper-content{
+        left: 0;
+    }
+    .site-main__wrraper-content-page{
+        width: 270px;
+    }
+    .site-main__wrraper-content-link{
+        &::before{
+            top: 283px;
+        }
+    }
+}

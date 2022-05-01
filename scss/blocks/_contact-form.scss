@@ -1,0 +1,84 @@
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+.contact-form__input {
+    margin-bottom: 24px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 16px;
+    padding-right: 500px;
+    background-color: #E6E6E7;
+    border: none;
+    outline: none;
+    &::placeholder{
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 30px;
+        opacity: 0.4;
+    }
+    &:not(:focus):not(:placeholder-shown):invalid{
+        border: 2px solid #F43030
+    }
+    &:not(:focus):not(:placeholder-shown):valid{
+        border: 2px solid $color-syan
+    }
+}
+.contact-form__input-page{
+    display: none;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    color: #F43030;
+}
+.contact-form__input--fname:not(:focus):not(:placeholder-shown):invalid + .contact-form__input-page--fname{
+    display: block;
+}
+.contact-form__input--email:not(:focus):not(:placeholder-shown):invalid + .contact-form__input-page--email{
+    display: block;
+}
+.contact-form__input--messege:not(:focus):not(:placeholder-shown):invalid + .contact-form__input-page--messege{
+    display: block;
+}
+.contact-form__input--messege{
+    resize: none;
+    &:not(:focus):not(:placeholder-shown):valid{
+        border: 2px solid transparent
+    }
+}
+.conatct-form__span {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 30px;
+    color: $color-dark;
+    opacity: 0.8;
+}
+.contact-form__submit {
+    padding: 17px 24px 17px 24px;
+    width: 200px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+    background-color: #203A4C;
+    border: none;
+}
+@include breakpoint-down(700px){
+    .contact-form__input{
+        padding-right: 350px;
+    }
+}
+@include breakpoint-down(533px){
+    .contact-form__input{
+        padding-right: 200px;
+    }
+}
+@include breakpoint-down(400px){
+    .contact-form__input{
+        padding-right: 100px;
+    }
+}

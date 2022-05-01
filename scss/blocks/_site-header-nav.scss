@@ -1,0 +1,16 @@
+
+@include breakpoint-down (533px){
+    .site-header-nav {
+        display: none;
+    }
+    .site-header-nav--open{
+        position: absolute;
+        z-index: 1;
+        top: 100%;
+        left: 153px;
+        opacity: 0.9;
+        display: block;
+        background-color: $color-dark;
+        padding: 73px 141px 218px 18px;    
+    }
+}

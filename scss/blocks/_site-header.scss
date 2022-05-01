@@ -1,0 +1,30 @@
+.site-header {
+    padding-top: 64px;
+    padding-bottom: 54px;
+}
+.site-header__wrraper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+.site-header__wrraper-logo {
+    text-decoration: none;
+}
+.site-header__wrraper-logo-img {
+    display: block;
+}
+.site-header__wrraper-burger{
+    display: none;
+    border: none;
+    background-color: transparent;
+}
+@include breakpoint-down(533px){
+    .site-header{
+        position: relative;
+        z-index: 1;
+    }
+    .site-header__wrraper-burger{
+        display: block;
+    }
+}
